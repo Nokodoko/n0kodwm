@@ -61,8 +61,6 @@ static const Layout layouts[] = {
 	{ "###",      nrowgrid },/*11*/
 	{ "---",      horizgrid },/*12*/
 	{ ":::",      gaplessgrid },/*13*/
-	{ "|M|",      centeredmaster },/*14*/
-	{ ">M>",      centeredfloatingmaster },/*15*/
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
@@ -112,9 +110,9 @@ static Key keys[] = {
 	{ MODKEY|Mod4Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
-	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_c,      setlayout,      {.v = &layouts[14]} },
+	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]}  },
+	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[2]}  },
+	{ MODKEY|ControlMask,           XK_t,      setlayout,      {.v = &layouts[4]}  },
 	{ MODKEY|ShiftMask,             XK_c,      setlayout,      {.v = &layouts[15]} },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[10]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
