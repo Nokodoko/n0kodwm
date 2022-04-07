@@ -43,7 +43,7 @@ static const Rule rules[] = {
     {"kitty", NULL, NULL, 1, 0, -1},
     {"wireshark", NULL, NULL, 1, 0, -1},
     {"Slack", NULL, NULL, 1 << 1, 0, -1},
-    {NULL, NULL, "Chromium", 1 << 2, 0, -1},
+    {NULL, NULL, "Chrome", 1 << 2, 0, -1},
     {"qutebrowser", NULL, NULL, 1 << 3, 0, -1},
     {"Android Messages", NULL, NULL, 1 << 4, 0, -1},
     {"mpv", NULL, NULL, 1 << 5, 0, -1},
