@@ -43,9 +43,10 @@ static const Rule rules[] = {
     {"kitty", NULL, NULL, 1, 0, -1},
     {"wireshark", NULL, NULL, 1, 0, -1},
     {"Slack", NULL, NULL, 1 << 1, 0, -1},
+    {"Discord", NULL, NULL, 1 << 1, 0, -1},
     {NULL, NULL, "Chrome", 1 << 2, 0, -1},
     {"qutebrowser", NULL, NULL, 1 << 3, 0, -1},
-    {"Android Messages", NULL, NULL, 1 << 4, 0, -1},
+    {"android-messages-desktop", NULL, NULL, 1 << 4, 0, -1},
     {"mpv", NULL, NULL, 1 << 5, 0, -1},
 };
 
@@ -105,9 +106,9 @@ static const char *termcmd[] = {"st", NULL};
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
-    {MODKEY, XK_Down, spawn, {.v = dmenucmd}},
+    {Mod4Mask, XK_space, spawn, {.v = dmenucmd}},
     {MODKEY | ShiftMask, XK_Return, spawn, {.v = termcmd}},
-    {MODKEY, XK_b, togglebar, {0}},
+    {MODKEY, XK_n, togglebar, {0}},
     {MODKEY, XK_j, focusstack, {.i = +1}},
     {MODKEY, XK_k, focusstack, {.i = -1}},
     {MODKEY, XK_i, incnmaster, {.i = +1}},
@@ -117,7 +118,7 @@ static Key keys[] = {
     {MODKEY, XK_Return, zoom, {0}},
     {MODKEY | Mod4Mask, XK_u, incrgaps, {.i = +5}},
     {MODKEY | Mod4Mask | ShiftMask, XK_u, incrgaps, {.i = -5}},
-    {MODKEY | Mod4Mask, XK_i, incrigaps, {.i = +5}},
+    {MODKEY | Mod4Mask, XK_i, incrigaps, {.i = +6}},
     {MODKEY | Mod4Mask | ShiftMask, XK_i, incrigaps, {.i = -5}},
     {MODKEY | Mod4Mask, XK_o, incrogaps, {.i = +5}},
     {MODKEY | Mod4Mask | ShiftMask, XK_o, incrogaps, {.i = -5}},
@@ -135,7 +136,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_t, setlayout, {.v = &layouts[0]}},
     {MODKEY, XK_t, setlayout, {.v = &layouts[2]}},
     {MODKEY | ControlMask, XK_t, setlayout, {.v = &layouts[4]}},
-    {MODKEY | ShiftMask, XK_c, setlayout, {.v = &layouts[15]}},
+    {MODKEY | ShiftMask, XK_c, setlayout, {.v = &layouts[3]}},
     {MODKEY, XK_g, setlayout, {.v = &layouts[10]}},
     {MODKEY, XK_space, setlayout, {0}},
     {MODKEY | ShiftMask, XK_space, togglefloating, {0}},
